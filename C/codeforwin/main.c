@@ -2,7 +2,7 @@
 
 int main()
 {work10();}
-
+// Function 1
 int work1()
 {
 	int  i, j;
