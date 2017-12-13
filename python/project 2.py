@@ -1,10 +1,9 @@
 f = open("data.txt", "r")
-
-
-
-newlist = f.split()
-for li in newlist:
+newlist = f.replace(" ", ",")
+newlist1 = newlist.split(",")
+for li in newlist1:
     print (li)
+
 qty = input("Please enter item quantity :")
 print ("Bill statement")
 print ("Bill ID", i)
@@ -12,8 +11,8 @@ from datetime import datetime
 now = datetime.now()
 print ("Date : %s-%s-%s  %s:%s\n" %((now.year),(now.month), (now.day),(now.hour), (now.minute)))
 print ("Item\tQty\tTot\n")
-     i = i + 1
-        order = input("Please enter the item ID :")
+i = i + 1
+order = input("Please enter the item ID :")
         
 
 

@@ -1,0 +1,10 @@
+	ROLEX BAKE MART
+	MENU
+No	Item	Price	Stock
+1.	Cake	90	50
+2.	Biscuit	20	100
+3.	Egg Bun	30	25
+4.	Soda	60	50
+5.	Milo	50	50
+6.	Nescafe	30	20
+7.	Nestea	30	20
