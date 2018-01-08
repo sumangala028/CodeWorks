@@ -18,7 +18,7 @@ print (itemIdList)
 print (itemNameList)
 print (itemPriceList)
 
-i = 0
+
 itemId = -1
 while (True):
     itemId = input("Please Input Item ID :")
@@ -28,26 +28,34 @@ while (True):
         print (itemId,end='\t')
         print (itemNameList[index],end='\t')
         print ("RS.",itemPriceList[index])
-        qty = input("Please Input the quantity")
+        qty = input("Please Input the quantity\n")
         qtyList.append(qty)
 
     else :
         break
-    
-def computeBill(order):
-    total = 0
-    for item in order:
-        total = itemPriceList[item] * qtyList[item]
-        return total
-    
-    print ("Bill Statement")
-    print ("Bill ID :%s" % (i+1))
-    from datetime import datetime
-    now = datetime.now()
-    print ("Date : %s-%s-%s  %s:%s\n" %((now.year),(now.month), (now.day),(now.hour), (now.minute)))
-    print ("\nItem\tQTY\tTot")
-    print ("%s\t%s\t%s" % itemIdList[item], qtyList[item], total)
+i = 0
+print ("Bill Statement")
+print ("Bill ID :%s" % (i+1))
+from datetime import datetime
+now = datetime.now()
+print ("Date : %s-%s-%s  %s:%s" %((now.year),(now.month), (now.day),(now.hour), (now.minute)))
+print ("\nItem\tPrice\tQTY\tTot")
+
+totalBill = 0
+total = 0
+for indx in indexList:
+    print (itemNameList[indx],end="\t")
+    print (itemPriceList[indx],end="\t")
+    print (qtyList[i], end="\t")
+    total = int(itemPriceList[i]) * int(qtyList[i])
+    print (total)
+    totalBill = totalBill + total
     i = i + 1
-    computeBill(index)
+
+
+print ("===========================")
+print ("subTotal :",end="\t\t") 
+print (totalBill)
+
 
     
